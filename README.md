@@ -1,12 +1,6 @@
-# 🚀 DEVOCTOPUS
+# 🐙 DEVOCTOPUS
 
-<p align="center">
-  <img width="200" height="200" src="https://i.imgur.com/y8m5pkQ.png">
-</p>
-
-Enjoy hand-writing your HTML? Keep it old-school with modern build tools. This boilerplate setup makes it easier to write your own styling, scripts, and mark-up.
-
-## ✨ Features
+## 🌟 Features
 
 - Write SCSS and modern JavaScript code in `src` and build minified, transpiled code for production in `dist`
 - Continuous integration with linting tests and deploying to `gh-pages`
@@ -16,13 +10,13 @@ Enjoy hand-writing your HTML? Keep it old-school with modern build tools. This b
 - Automatic copying of HTML and static assets from `src` to `dist` folders
 - Linting for styles and scripts
 
-## 🛠 Usage
+## 🎛 Usage
 
-- Use this template on GitHub or download the latest release from the [Releases page](https://github.com/erickzhao/static-html-webpack-boilerplate/releases).
-- Write all your ES2015+ Javascript code in `src/js` and SCSS styling in `src/style`. Store static assets in `src/static`. Organize HTML files the way you like.
+- Write all your ES2015+ Javascript code in `src/js` and SCSS styling in `src/style`. Store static assets in `src/static`. 
+- Organize HTML files the way you like.
 - Available commands:
-  - `npm run build`: Build files to the `dist` folder. Transpiles down to ES5 and bundles all JS into `app.bundle.js`. Transpiles SCSS to CSS and adds prefixing into `style.bundle.css`. Copies static assets and HTML over, and bundled CSS and JS gets added to HTML file.
-  - `npm run start:dev`: Run `webpack-dev-server` at `localhost:9000`. Includes live reloading on any Javascript/SCSS/HTML changes.
+  - `npm run build`: Build files to the `dist` folder. Transpile down to ES5 and bundles all JS into `app.bundle.js`. Transpile SCSS to CSS and adds prefixing into `style.bundle.css`. Copies static assets and HTML over, and bundled CSS and JS gets added to HTML file.
+  - `npm run start:dev`: Run `webpack-dev-server` at `localhost:3000`. Includes live reloading on any Javascript/SCSS/HTML changes.
   - `npm run start`: Builds files and runs a local production server on `localhost:8080` with `http-server`.
   - `npm run run lint:js`: Lints JS with ESLint.
   - `npm run lint:styles`: Lints SCSS stylesheets with stylelint.
