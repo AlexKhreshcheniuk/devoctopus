@@ -1,0 +1,16 @@
+.do-header {
+  &__menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__menu-item {
+    font-family: mayeka-light-demo-regular, sans-serif;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 10px 26px;
+    text-transform: uppercase;
+  }
+}

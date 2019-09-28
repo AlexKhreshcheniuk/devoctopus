@@ -15,7 +15,7 @@
     "declaration-block-trailing-semicolon": "always",
     "declaration-no-important": true,
     "declaration-colon-space-before": "never",
-    "declaration-colon-space-after": "always",
+    "declaration-colon-space-after": "always-single-line",
     "number-leading-zero": "always",
     "function-url-quotes": "always",
     "function-url-scheme-blacklist": "always",
@@ -24,7 +24,9 @@
     "comment-whitespace-inside": "always",
     "comment-empty-line-before": "never",
     "at-rule-no-vendor-prefix": true,
-    "rule-empty-line-before": "always",
+    "rule-empty-line-before": [ "always-multi-line", {
+      "ignore": ["inside-block"]
+    }],
     "selector-pseudo-element-colon-notation": "double",
     "selector-pseudo-class-parentheses-space-inside": "never",
     "selector-max-universal": 3,
