@@ -1,6 +1,8 @@
 const glob = require('glob');
 const path = require('path');
 
+const StyleLintPlugin = require('stylelint-webpack-plugin');
+
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
@@ -36,6 +38,13 @@ module.exports = {
     ],
   },
   plugins: [
+    new StyleLintPlugin({
+      configFile: '.stylelintrc',
+      context: 'src',
+      files: '**/*.scss',
+      failOnError: false,
+      quiet: false,
+    }),
     new CopyWebpackPlugin([
       {
         from: './src/assets/',
