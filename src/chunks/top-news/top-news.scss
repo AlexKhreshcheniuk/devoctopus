@@ -1,0 +1,48 @@
+@import "../../styles/utility/variables";
+@import "../../styles/utility/mixins";
+
+.do-top-news {
+  position: relative;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 15.555555556%;
+    background-color: rgba(255, 255, 255, 0.84);
+    display: inline-flex;
+    flex-direction: column;
+    padding: px-to-rem(60) px-to-rem(60) px-to-rem(60) px-to-rem(30);
+    text-align: left;
+    transform: translateY(-50%);
+  }
+
+  &__number {
+    position: absolute;
+    right: px-to-rem(40);
+    top: 0;
+    font-family: BebasNeue, sans-serif;
+    font-size: px-to-rem(118);
+    color: #fbd0c3;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 25%;
+      width: 165%;
+      height: px-to-rem(2);
+      background-color: #fbd0c3;
+      content: "";
+    }
+  }
+
+  &__title {
+    font-family: "Mayeka Bold Demo", sans-serif;
+    font-size: px-to-rem(35);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-family: "Mayeka Light Demo", sans-serif;
+    font-size: px-to-rem(35);
+  }
+}

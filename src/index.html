@@ -12,11 +12,9 @@
 </head>
 
 <body>
-  <div class="container">
-    <div do-include-html="./chunks/header/header.html"></div>
-    <h1>Hello Static HTML!</h1>
-    <a href="./page.html">Link to my other page</a>
-    <img src="./assets/tail.png" alt="code"/>
+  <div class="application container">
+    <div class="application__header" do-include-html="./chunks/header/header.html"></div>
+    <div class="application__top-news" do-include-html="./chunks/top-news/top-news.html"></div>
   </div>
 
 <script src="./js/app.js"></script>

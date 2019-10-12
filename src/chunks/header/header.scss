@@ -1,4 +1,17 @@
+@import "../../styles/utility/variables";
+@import "../../styles/utility/mixins";
+
 .do-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: px-to-rem(33) 0;
+
+  &__logo {
+    min-width: px-to-rem(165);
+    width: px-to-rem(320);
+  }
+
   &__menu-list {
     display: flex;
     align-items: center;
@@ -6,11 +19,56 @@
   }
 
   &__menu-item {
-    font-family: mayeka-light-demo-regular, sans-serif;
+    position: relative;
+    font-family: mayeka-regular-demo, sans-serif;
+    color: #000000;
     cursor: pointer;
-    font-size: 14px;
-    line-height: 16px;
-    padding: 10px 26px;
+    font-size: px-to-rem(14);
+    line-height: px-to-rem(16);
+    padding: px-to-rem(10) px-to-rem(26);
     text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: px-to-rem(2);
+      content: "";
+      background-color: $prime-orange;
+      border-radius: px-to-rem(5);
+      opacity: 0;
+      transform: translateY(5px);
+      visibility: hidden;
+    }
+
+    &:hover {
+      color: $prime-orange;
+
+      &::after {
+        animation: menuItemHoverAnimation 0.3s linear forwards;
+      }
+    }
+  }
+
+  &__search {
+    min-width: px-to-rem(12);
+    cursor: pointer;
+  }
+}
+
+@keyframes menuItemHoverAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(px-to-rem(5));
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
   }
 }
