@@ -1,0 +1,47 @@
+@import "../../styles/utility/mixins";
+
+.our-team {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: px-to-rem(107.5);
+  padding-bottom: px-to-rem(60);
+
+  &__content {
+    width: 70%;
+    max-width: px-to-rem(1070);
+    display: flex;
+    margin-top: px-to-rem(70);
+  }
+
+  &__image,
+  &__description {
+    flex-basis: 50%;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: px-to-rem(70) px-to-rem(30) 0 px-to-rem(80);
+  }
+
+  &__caption {
+    color: #000000;
+    font-family: Roboto, sans-serif;
+    font-size: px-to-rem(20);
+  }
+
+  &__text {
+    color: #000000;
+    font-family: Roboto, sans-serif;
+    font-size: px-to-rem(18);
+    font-weight: 300;
+    margin-top: px-to-rem(20);
+    text-align: left;
+  }
+
+  &__button-set {
+    margin-top: px-to-rem(35);
+  }
+}

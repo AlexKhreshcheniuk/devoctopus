@@ -2,11 +2,44 @@
 
 .our-services {
   padding-top: px-to-rem(60);
+  padding-bottom: px-to-rem(107.5);
 
   &__list {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  &__item-image {
+    flex-basis: 50%;
+  }
+
+  &__item-content {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 50%;
+    padding: 0 px-to-rem(80);
+  }
+
+  &__item-caption {
+    color: #000000;
+    font-family: Roboto, sans-serif;
+    font-size: px-to-rem(20);
+  }
+
+  &__item-text {
+    color: #000000;
+    font-family: Roboto, sans-serif;
+    font-size: px-to-rem(18);
+    font-weight: 300;
+    margin-top: px-to-rem(20);
+  }
+
+  &__item-button-set {
+    margin-top: px-to-rem(35);
+    text-align: left;
   }
 
   &__item {
@@ -34,36 +67,5 @@
         text-align: right;
       }
     }
-  }
-
-  &__item-image {
-    flex-basis: 50%;
-  }
-
-  &__item-content {
-    background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-basis: 50%;
-    padding: 0 px-to-rem(80);
-  }
-
-  &__item-caption {
-    color: #000000;
-    font-family: Roboto, sans-serif;
-    font-size: px-to-rem(20);
-  }
-
-  &__item-text {
-    color: #000000;
-    font-family: Roboto, sans-serif;
-    font-size: px-to-rem(18);
-    margin-top: px-to-rem(20);
-  }
-
-  &__item-button-set {
-    margin-top: px-to-rem(35);
-    text-align: left;
   }
 }
