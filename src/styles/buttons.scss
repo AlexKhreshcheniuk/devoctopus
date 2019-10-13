@@ -1,12 +1,13 @@
 @import "utility/mixins";
 
 .do-button {
+  border: px-to-rem(1) solid $prime-orange;
   border-radius: 0;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: "Mayeka Regular Demo", sans-serif;
+  font-family: $mayeka-regular;
   font-size: px-to-rem(18);
   padding: px-to-rem(12) px-to-rem(30);
   transition:
@@ -15,8 +16,9 @@
     color 0.3s ease-in-out;
 
   &:hover {
-    border-radius: px-to-rem(5);
     background-color: rgba($prime-orange, 0.1);
+    border-color: lighten($prime-orange, 30%) lighten($prime-orange, 30%) $prime-orange lighten($prime-orange, 30%);
+    border-radius: px-to-rem(5);
     color: $prime-orange;
   }
 
@@ -26,7 +28,6 @@
   }
 
   &_transparent {
-    border: px-to-rem(1) solid $prime-orange;
     color: $prime-orange;
   }
 }

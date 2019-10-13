@@ -25,13 +25,13 @@
 
   &__item-caption {
     color: #000000;
-    font-family: Roboto, sans-serif;
+    font-family: $roboto;
     font-size: px-to-rem(20);
   }
 
   &__item-text {
     color: #000000;
-    font-family: Roboto, sans-serif;
+    font-family: $roboto;
     font-size: px-to-rem(18);
     font-weight: 300;
     margin-top: px-to-rem(20);

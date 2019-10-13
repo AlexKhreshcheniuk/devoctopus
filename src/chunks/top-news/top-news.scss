@@ -35,13 +35,13 @@
   }
 
   &__title {
-    font-family: "Mayeka Bold Demo", sans-serif;
+    font-family: $mayeka-bold;
     font-size: px-to-rem(35);
     text-transform: uppercase;
   }
 
   &__text {
-    font-family: "Mayeka Light Demo", sans-serif;
+    font-family: $mayeka-light;
     font-size: px-to-rem(35);
   }
 }

@@ -39,13 +39,13 @@
   }
 
   &__caption {
-    font-family: "Mayeka Regular Demo", sans-serif;
+    font-family: $mayeka-regular;
     font-size: px-to-rem(20);
     margin-left: px-to-rem(15);
   }
 
   &__text {
-    font-family: "Mayeka Bold Demo", sans-serif;
+    font-family: $mayeka-bold;
     font-size: px-to-rem(35);
     margin-top: px-to-rem(20);
     text-transform: uppercase;

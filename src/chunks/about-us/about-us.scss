@@ -36,7 +36,7 @@
   }
 
   &__text {
-    font-family: Roboto, sans-serif;
+    font-family: $roboto;
     font-size: px-to-rem(18);
     margin-top: px-to-rem(35);
     padding-right: px-to-rem(90);
