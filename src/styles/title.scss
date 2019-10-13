@@ -1,0 +1,49 @@
+@import "utility/mixins";
+
+.do-app-title {
+  &__counter {
+    width: px-to-rem(42);
+    height: px-to-rem(42);
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: $prime-orange;
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+  }
+
+  &__value {
+    position: relative;
+    color: #ffffff;
+    font-family: BebasNeue, sans-serif;
+    font-size: px-to-rem(18);
+    line-height: px-to-rem(18);
+    padding-right: px-to-rem(7);
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: px-to-rem(1);
+      background-color: #ffffff;
+      content: "";
+    }
+  }
+
+  &__caption {
+    font-family: "Mayeka Regular Demo", sans-serif;
+    font-size: px-to-rem(20);
+    margin-left: px-to-rem(15);
+  }
+
+  &__text {
+    font-family: "Mayeka Bold Demo", sans-serif;
+    font-size: px-to-rem(35);
+    margin-top: px-to-rem(20);
+    text-transform: uppercase;
+  }
+}

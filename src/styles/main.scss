@@ -1,9 +1,12 @@
 @import "reset";
 @import "utility/variables";
 @import "fonts/fonts";
+@import "buttons";
+@import "title";
 @import "common";
 @import "../chunks/header/header";
 @import "../chunks/top-news/top-news";
+@import "../chunks/about-us/about-us";
 
 html {
   font-size: $base-font-size+px;

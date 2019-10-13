@@ -1,4 +1,3 @@
-@import "../../styles/utility/variables";
 @import "../../styles/utility/mixins";
 
 .do-top-news {
@@ -7,7 +6,7 @@
   &__content {
     position: absolute;
     top: 50%;
-    left: 15.555555556%;
+    left: 15.5556%;
     background-color: rgba(255, 255, 255, 0.84);
     display: inline-flex;
     flex-direction: column;
