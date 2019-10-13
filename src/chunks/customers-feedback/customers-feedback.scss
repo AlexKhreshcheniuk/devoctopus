@@ -1,7 +1,68 @@
 @import "../../styles/utility/mixins";
 
 .customers-feedback {
-  background: url("./../assets/customers-feedback/customers-feedback-image.jpg") no-repeat center;
+  background: url("./../assets/customers-feedback/customers-feedback-bg.jpg") no-repeat center;
+  background-size: cover;
   padding-top: px-to-rem(60);
   padding-bottom: px-to-rem(94);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__quote {
+    position: relative;
+    width: 80%;
+    max-width: px-to-rem(920);
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: px-to-rem(35);
+  }
+
+  &__quote-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__quote-item {
+    position: relative;
+    width: 70%;
+    background-color: rgba(250, 250, 250, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: px-to-rem(95) px-to-rem(50) px-to-rem(95) px-to-rem(250);
+  }
+
+  &__quote-sign {
+    position: absolute;
+    top: px-to-rem(25);
+    right: px-to-rem(25);
+  }
+
+  &__quote-title {
+    font-size: px-to-rem(28);
+  }
+
+  &__quote-subtitle,
+  &__quote-text {
+    color: #000000;
+    font-family: $roboto;
+    margin-top: px-to-rem(10);
+  }
+
+  &__quote-subtitle {
+    font-size: px-to-rem(20);
+  }
+
+  &__quote-text {
+    font-size: px-to-rem(18);
+    text-align: left;
+  }
 }
