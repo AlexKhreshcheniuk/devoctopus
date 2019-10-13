@@ -1,0 +1,25 @@
+@import "../../styles/utility/mixins";
+
+.portfolio {
+  margin-top: px-to-rem(120);
+
+  &__slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: px-to-rem(90);
+  }
+
+  &__slider-item {
+    &_prev,
+    &_next {
+      width: 20.833333333%;
+      height: auto;
+    }
+
+    &_current {
+      width: px-to-rem(800);
+      height: px-to-rem(600);
+    }
+  }
+}
