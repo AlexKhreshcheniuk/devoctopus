@@ -1,0 +1,31 @@
+@import "../../styles/utility/mixins";
+
+.our-philosophy {
+  display: flex;
+  justify-content: center;
+  padding-top: px-to-rem(60);
+  padding-bottom: px-to-rem(60);
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: px-to-rem(520);
+    margin-left: px-to-rem(70);
+  }
+
+  &__text {
+    font-family: Roboto, sans-serif;
+    font-size: px-to-rem(18);
+    margin-top: px-to-rem(35);
+    text-align: left;
+  }
+
+  &__button-set {
+    margin-top: px-to-rem(35);
+    text-align: left;
+  }
+}
