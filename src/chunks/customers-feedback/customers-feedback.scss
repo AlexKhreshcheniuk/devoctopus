@@ -1,0 +1,7 @@
+@import "../../styles/utility/mixins";
+
+.customers-feedback {
+  //background: url("./assets/customers-feedback/customers-feedback-image.jpg") no-repeat center;
+  padding-top: px-to-rem(60);
+  padding-bottom: px-to-rem(94);
+}
