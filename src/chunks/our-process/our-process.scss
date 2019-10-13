@@ -1,0 +1,78 @@
+@import "../../styles/utility/mixins";
+
+$indent-right: px-to-rem(75);
+$step-icon-size: px-to-rem(134);
+
+.our-process {
+  background-color: #f7f7f7;
+
+  &__container {
+    padding: px-to-rem(90) 0;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: px-to-rem(70);
+  }
+
+  &__step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: $indent-right;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__step-icon {
+    width: $step-icon-size;
+    height: $step-icon-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  $base-color: #ff8e6b;
+
+  @for $i from 1 through 6 {
+    &__step:nth-child(#{$i}) {
+      .our-process__step-icon {
+        background-color: darken($base-color, $i * 2.3%);
+      }
+    }
+  }
+
+  &__step-title {
+    color: #000000;
+    font-family: "Mayeka Regular Demo", sans-serif;
+    font-size: px-to-rem(18);
+    margin-top: px-to-rem(30);
+  }
+
+  &__step-sign {
+    position: absolute;
+    top: calc(#{$step-icon-size} / 2);
+    right: calc(#{$indent-right} / 2);
+    width: px-to-rem(13);
+    height: px-to-rem(26);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(50%, -50%);
+  }
+
+  &__button-set {
+    margin-top: px-to-rem(70);
+  }
+}
