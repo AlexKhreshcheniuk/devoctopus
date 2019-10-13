@@ -1,6 +1,10 @@
 @import "utility/mixins";
 
 .do-app-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
   &__counter {
     width: px-to-rem(42);
     height: px-to-rem(42);

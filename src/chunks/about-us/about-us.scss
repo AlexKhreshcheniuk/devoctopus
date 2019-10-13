@@ -1,6 +1,6 @@
 @import "../../styles/utility/mixins";
 
-.do-about-us {
+.about-us {
   display: flex;
   justify-content: center;
   margin: 6.7% 0;
@@ -9,6 +9,10 @@
   &__content {
     max-width: px-to-rem(520);
     margin-right: px-to-rem(70);
+  }
+
+  &__title {
+    align-items: flex-start;
   }
 
   &__number {

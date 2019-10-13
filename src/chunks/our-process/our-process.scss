@@ -10,12 +10,6 @@ $step-icon-size: px-to-rem(134);
     padding: px-to-rem(90) 0;
   }
 
-  &__title {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
   &__steps {
     display: flex;
     align-items: flex-start;
