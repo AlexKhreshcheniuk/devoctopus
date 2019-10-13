@@ -18,6 +18,16 @@ module.exports = merge(common, {
         test: /\.(sass|scss)$/,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8000, // Convert images < 8kb to base64 strings
+            name: 'images/[hash]-[name].[ext]',
+          },
+        }],
+      },
     ],
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
