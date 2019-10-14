@@ -1,5 +1,16 @@
 @import "../../styles/utility/mixins";
 
+%footer-title {
+  font-family: $mayeka-regular;
+  font-size: px-to-rem(20);
+}
+
+%footer-text {
+  font-family: $roboto;
+  font-size: px-to-rem(18);
+  font-weight: 300;
+}
+
 .footer {
   background-color: #414141;
   padding-top: px-to-rem(70);
@@ -13,6 +24,17 @@
   &__section {
     max-width: px-to-rem(610);
     flex-basis: 50%;
+
+    &_left {
+      padding-right: px-to-rem(55);
+    }
+
+    &_right {
+      display: flex;
+      flex-wrap: wrap;
+      color: #ffffff;
+      padding-left: px-to-rem(55);
+    }
   }
 
   &__subscribe {
@@ -21,11 +43,11 @@
   }
 
   &__subscribe-label {
+    @extend %footer-title;
+
     flex-basis: 100%;
     color: #ffffff;
     cursor: pointer;
-    font-family: $mayeka-regular;
-    font-size: px-to-rem(20);
     margin-bottom: px-to-rem(30);
     text-align: left;
   }
@@ -63,14 +85,68 @@
   }
 
   &__about-title {
-    font-family: $mayeka-regular;
-    font-size: px-to-rem(20);
+    @extend %footer-title;
   }
 
   &__about-text {
-    font-family: $roboto;
-    font-size: px-to-rem(18);
-    font-weight: 300;
+    @extend %footer-text;
+
     margin-top: px-to-rem(15);
+  }
+
+  &__contacts {
+    text-align: left;
+  }
+
+  &__contacts-title {
+    @extend %footer-title;
+  }
+
+  &__contacts-address {
+    @extend %footer-text;
+
+    line-height: 150%;
+    margin-top: px-to-rem(15);
+  }
+
+  &__menu {
+    margin-left: px-to-rem(120);
+    text-align: left;
+  }
+
+  &__menu-title {
+    @extend %footer-title;
+  }
+
+  &__menu-list {
+    @extend %footer-text;
+
+    display: flex;
+    flex-direction: column;
+    margin-top: px-to-rem(15);
+  }
+
+  &__menu-item {
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+      color 0.2s ease-in-out,
+      transform 0.3s ease-in-out;
+
+    &:hover {
+      color: $prime-orange;
+      transform: translateX(10%);
+    }
+  }
+
+  &__right-reserved {
+    @extend %footer-title;
+
+    display: flex;
+    align-items: flex-end;
+    flex-basis: 100%;
+    justify-content: flex-end;
+    text-align: right;
   }
 }
