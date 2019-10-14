@@ -1,0 +1,76 @@
+@import "../../styles/utility/mixins";
+
+.footer {
+  background-color: #414141;
+  padding-top: px-to-rem(70);
+  padding-bottom: px-to-rem(70);
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__section {
+    max-width: px-to-rem(610);
+    flex-basis: 50%;
+  }
+
+  &__subscribe {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__subscribe-label {
+    flex-basis: 100%;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: $mayeka-regular;
+    font-size: px-to-rem(20);
+    margin-bottom: px-to-rem(30);
+    text-align: left;
+  }
+
+  &__subscribe-input {
+    flex: 1;
+  }
+
+  &__subscribe-button-set {
+    margin-left: px-to-rem(15);
+  }
+
+  &__social {
+    display: flex;
+    margin-top: px-to-rem(50);
+  }
+
+  &__social-item {
+    margin-right: px-to-rem(15);
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-30%);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__about {
+    color: #ffffff;
+    margin-top: px-to-rem(50);
+    text-align: left;
+  }
+
+  &__about-title {
+    font-family: $mayeka-regular;
+    font-size: px-to-rem(20);
+  }
+
+  &__about-text {
+    font-family: $roboto;
+    font-size: px-to-rem(18);
+    font-weight: 300;
+    margin-top: px-to-rem(15);
+  }
+}
