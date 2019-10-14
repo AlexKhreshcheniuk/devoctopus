@@ -49,6 +49,7 @@
   }
 
   &__map {
+    max-height: px-to-rem(400);
     margin-top: px-to-rem(120);
   }
 }
