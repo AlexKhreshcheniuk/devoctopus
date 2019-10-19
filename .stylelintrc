@@ -37,7 +37,7 @@
     "selector-pseudo-element-colon-notation": "double",
     "selector-pseudo-class-parentheses-space-inside": "never",
     "selector-max-universal": 3,
-    "max-nesting-depth": 3,
+    "max-nesting-depth": 4,
     "media-feature-range-operator-space-before": "always",
     "media-feature-range-operator-space-after": "always",
     "media-feature-parentheses-space-inside": "never",

@@ -1,11 +1,13 @@
+@import "utility/mixins";
+
 body {
   font-family: mayeka-light-demo-regular, sans-serif;
 }
 
 .container {
-  max-width: 1920px;
+  max-width: px-to-rem(1920);
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 5.8593%;
 }
 
 .icon {
