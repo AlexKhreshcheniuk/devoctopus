@@ -3,11 +3,19 @@
 .portfolio {
   margin-top: px-to-rem(120);
 
+  @include ctx_tablet {
+    margin-top: px-to-rem(40);
+  }
+
   &__slider {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: px-to-rem(90);
+
+    @include ctx_tablet {
+      margin-top: px-to-rem(35);
+    }
   }
 
   &__slider-item {
@@ -18,8 +26,11 @@
     }
 
     &_current {
-      width: px-to-rem(800);
-      height: px-to-rem(600);
+      width: 70%;
+      max-width: px-to-rem(800);
+      height: auto;
+      max-height: px-to-rem(600);
+      margin: 0 px-to-rem(20);
     }
   }
 }

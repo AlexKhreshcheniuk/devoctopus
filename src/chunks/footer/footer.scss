@@ -27,6 +27,10 @@
 
     &_left {
       padding-right: px-to-rem(55);
+
+      @include ctx_tablet {
+        padding-right: px-to-rem(30);
+      }
     }
 
     &_right {
@@ -34,6 +38,11 @@
       flex-wrap: wrap;
       color: #ffffff;
       padding-left: px-to-rem(55);
+
+      @include ctx_tablet {
+        justify-content: space-around;
+        padding-left: px-to-rem(30);
+      }
     }
   }
 
@@ -50,6 +59,10 @@
     cursor: pointer;
     margin-bottom: px-to-rem(30);
     text-align: left;
+
+    @include ctx_tablet {
+      margin-bottom: px-to-rem(20);
+    }
   }
 
   &__subscribe-input {
@@ -58,6 +71,11 @@
 
   &__subscribe-button-set {
     margin-left: px-to-rem(15);
+
+    @include ctx_tablet(portrait) {
+      margin-top: px-to-rem(15);
+      margin-left: 0;
+    }
   }
 
   &__social {
@@ -112,6 +130,10 @@
   &__menu {
     margin-left: px-to-rem(120);
     text-align: left;
+
+    @include ctx_tablet(portrait) {
+      margin-left: px-to-rem(40);
+    }
   }
 
   &__menu-title {

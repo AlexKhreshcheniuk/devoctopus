@@ -6,9 +6,25 @@
   justify-content: space-between;
   margin: px-to-rem(33) 0;
 
+  @include ctx_tablet(portrait) {
+    justify-content: flex-end;
+  }
+
+  @include ctx_mobile {
+    justify-content: flex-end;
+  }
+
   &__logo {
     min-width: px-to-rem(165);
     width: px-to-rem(320);
+
+    @include ctx_tablet(portrait) {
+      margin-right: auto;
+    }
+
+    @include ctx_mobile {
+      margin-right: auto;
+    }
   }
 
   &__menu-list {
@@ -16,6 +32,14 @@
     align-items: center;
     justify-content: center;
     margin-left: px-to-rem(15);
+
+    @include ctx_tablet(portrait) {
+      display: none;
+    }
+
+    @include ctx_mobile {
+      display: none;
+    }
 
     &:hover {
       .do-header__menu-item {
@@ -25,6 +49,18 @@
           animation: menuItemHoverAnimation 0.5s ease-in-out;
           color: $prime-orange;
         }
+      }
+    }
+
+    &_mobile {
+      display: none;
+
+      @include ctx_tablet(portrait) {
+        display: flex;
+      }
+
+      @include ctx_mobile {
+        display: flex;
       }
     }
   }
@@ -61,9 +97,8 @@
         animation: menuItemUnderlineHoverAnimation 0.3s linear forwards;
       }
     }
-    /* stylelint-enable */
   }
-
+  /* stylelint-enable */
   &__search {
     min-width: px-to-rem(12);
     cursor: pointer;

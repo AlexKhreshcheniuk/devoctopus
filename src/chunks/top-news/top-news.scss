@@ -13,6 +13,15 @@
     padding: px-to-rem(60) px-to-rem(60) px-to-rem(60) px-to-rem(30);
     text-align: left;
     transform: translateY(-50%);
+
+    @include ctx_tablet {
+      left: 4%;
+    }
+
+    @include ctx_tablet(portrait) {
+      width: 50%;
+      height: 100%;
+    }
   }
 
   &__number {

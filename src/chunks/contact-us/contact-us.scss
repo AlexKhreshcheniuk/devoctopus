@@ -3,6 +3,10 @@
 .contact-us {
   margin-top: px-to-rem(120);
 
+  @include ctx_tablet {
+    margin-top: px-to-rem(40);
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -17,6 +21,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: px-to-rem(70);
+
+    @include ctx_tablet {
+      margin-top: px-to-rem(35);
+    }
   }
 
   &__form-label {
@@ -47,5 +55,9 @@
   &__map {
     max-height: px-to-rem(400);
     margin-top: px-to-rem(120);
+
+    @include ctx_tablet {
+      margin-top: px-to-rem(35);
+    }
   }
 }

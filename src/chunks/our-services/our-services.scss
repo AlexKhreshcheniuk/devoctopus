@@ -4,6 +4,11 @@
   padding-top: px-to-rem(60);
   padding-bottom: px-to-rem(107.5);
 
+  @include ctx_tablet {
+    padding-top: px-to-rem(35);
+    padding-bottom: px-to-rem(35);
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -21,6 +26,10 @@
     flex-direction: column;
     flex-basis: 50%;
     padding: 0 px-to-rem(80);
+
+    @include ctx_tablet {
+      padding: px-to-rem(30);
+    }
   }
 
   &__item-caption {
@@ -43,10 +52,14 @@
   }
 
   &__item {
-    width: 70%;
+    width: 90%;
     max-width: px-to-rem(1160);
     display: flex;
     margin-top: px-to-rem(90);
+
+    @include ctx_tablet {
+      margin-top: px-to-rem(35);
+    }
 
     &_right {
       .our-services__item-content {

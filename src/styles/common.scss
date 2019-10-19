@@ -8,6 +8,10 @@ body {
   max-width: px-to-rem(1920);
   margin: 0 auto;
   padding: 0 5.8593%;
+
+  @include ctx_tablet {
+    padding: 0 4%;
+  }
 }
 
 .icon {

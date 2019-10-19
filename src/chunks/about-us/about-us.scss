@@ -4,11 +4,42 @@
   display: flex;
   justify-content: center;
   margin: 6.7% 0;
-  text-align: left;
+  overflow: hidden;
+
+  @include ctx_tablet(landscape) {
+    margin: px-to-rem(45) 0 0;
+  }
+
+  @include ctx_tablet(portrait) {
+    margin: px-to-rem(45) 0;
+  }
 
   &__content {
     max-width: px-to-rem(520);
+    flex-basis: 50%;
     margin-right: px-to-rem(70);
+    text-align: left;
+
+    @include ctx_tablet(portrait) {
+      margin-right: px-to-rem(35);
+    }
+  }
+
+  &__image-item {
+    display: flex;
+    align-items: center;
+
+    @include ctx_tablet {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+  }
+
+  &__image {
+    @include ctx_tablet {
+      max-width: unset;
+      height: 80%;
+    }
   }
 
   &__title {
@@ -40,6 +71,10 @@
     font-size: px-to-rem(18);
     margin-top: px-to-rem(35);
     padding-right: px-to-rem(90);
+
+    @media (max-width: 1366px) {
+      padding-right: 0;
+    }
   }
 
   &__button-set {

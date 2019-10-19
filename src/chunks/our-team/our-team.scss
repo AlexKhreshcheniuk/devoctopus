@@ -7,11 +7,24 @@
   padding-top: px-to-rem(107.5);
   padding-bottom: px-to-rem(60);
 
+  @include ctx_tablet {
+    padding-top: px-to-rem(35);
+    padding-bottom: px-to-rem(35);
+  }
+
   &__content {
     width: 70%;
     max-width: px-to-rem(1070);
     display: flex;
     margin-top: px-to-rem(70);
+
+    @include ctx_tablet {
+      margin-top: px-to-rem(35);
+    }
+
+    @include ctx_tablet(portrait) {
+      width: 90%;
+    }
   }
 
   &__image,
@@ -24,6 +37,10 @@
     flex-direction: column;
     align-items: flex-start;
     padding: px-to-rem(70) px-to-rem(30) 0 px-to-rem(80);
+
+    @include ctx_tablet {
+      padding: px-to-rem(35) 0 px-to-rem(35) px-to-rem(50);
+    }
   }
 
   &__caption {

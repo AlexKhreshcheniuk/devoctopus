@@ -6,9 +6,43 @@
   padding-top: px-to-rem(60);
   padding-bottom: px-to-rem(60);
 
+  @include ctx_tablet {
+    padding-top: px-to-rem(35);
+    padding-bottom: px-to-rem(35);
+  }
+
+  &__image-item {
+    display: flex;
+    align-items: center;
+
+    @include ctx_tablet {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+
+    @include ctx_tablet(landscape) {
+      justify-content: center;
+    }
+
+    @include ctx_tablet(portrait) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__image {
+    @include ctx_tablet {
+      max-width: unset;
+      height: 80%;
+    }
+  }
+
   &__content {
     max-width: px-to-rem(520);
     margin-left: px-to-rem(70);
+
+    @include ctx_tablet {
+      margin-left: px-to-rem(35);
+    }
   }
 
   &__text {
