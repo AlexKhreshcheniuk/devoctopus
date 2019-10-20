@@ -73,6 +73,12 @@
     @include ctx_tablet {
       margin-top: px-to-rem(25);
     }
+
+    @include ctx_mobile(portrait) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin-top: 0;
+    }
   }
 
   &__icon-item {
@@ -92,6 +98,10 @@
 
     @include ctx_tablet {
       height: px-to-rem(70);
+    }
+
+    @include ctx_mobile(portrait) {
+      padding-top: px-to-rem(20, $font-size-mobile);
     }
   }
 

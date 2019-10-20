@@ -1,7 +1,20 @@
 @import "utility/mixins";
 
+html {
+  font-size: $font-size-base+px;
+
+  @include ctx_tablet {
+    font-size: $font-size-tablet+px;
+  }
+
+  @include ctx_mobile {
+    font-size: $font-size-mobile+px;
+  }
+}
+
 body {
-  font-family: mayeka-light-demo-regular, sans-serif;
+  font-family: $mayeka-light;
+  text-align: center;
 }
 
 .container {

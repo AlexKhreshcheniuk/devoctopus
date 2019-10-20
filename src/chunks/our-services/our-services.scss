@@ -69,6 +69,18 @@
       .our-services__item-text {
         text-align: left;
       }
+
+      @include ctx_mobile(portrait) {
+        flex-direction: column;
+
+        .our-services__item-content {
+          align-items: center;
+        }
+
+        .our-services__item-text {
+          text-align: center;
+        }
+      }
     }
 
     &_left {
@@ -78,6 +90,18 @@
 
       .our-services__item-text {
         text-align: right;
+      }
+
+      @include ctx_mobile(portrait) {
+        flex-direction: column-reverse;
+
+        .our-services__item-content {
+          align-items: center;
+        }
+
+        .our-services__item-text {
+          text-align: center;
+        }
       }
     }
   }

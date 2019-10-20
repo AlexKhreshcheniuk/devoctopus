@@ -16,9 +16,17 @@
   padding-top: px-to-rem(70);
   padding-bottom: px-to-rem(70);
 
+  @include ctx_mobile(portrait) {
+    padding-bottom: 0;
+  }
+
   &__container {
     display: flex;
     justify-content: center;
+
+    @include ctx_mobile(portrait) {
+      flex-direction: column;
+    }
   }
 
   &__section {
@@ -31,6 +39,10 @@
       @include ctx_tablet {
         padding-right: px-to-rem(30);
       }
+
+      @include ctx_mobile {
+        padding-right: 0;
+      }
     }
 
     &_right {
@@ -42,6 +54,17 @@
       @include ctx_tablet {
         justify-content: space-around;
         padding-left: px-to-rem(30);
+      }
+
+      @include ctx_mobile {
+        justify-content: space-between;
+      }
+
+      @include ctx_mobile(portrait) {
+        margin-top: px-to-rem(30, $font-size-mobile);
+        margin-left: -4%;
+        margin-right: -4%;
+        padding-left: 0;
       }
     }
   }
@@ -76,11 +99,25 @@
       margin-top: px-to-rem(15);
       margin-left: 0;
     }
+
+    @include ctx_mobile(landscape) {
+      margin-left: px-to-rem(20, $font-size-mobile);
+    }
+
+    @include ctx_mobile(portrait) {
+      margin-top: 0;
+      margin-left: px-to-rem(15, $font-size-mobile);
+    }
   }
 
   &__social {
     display: flex;
     margin-top: px-to-rem(50);
+
+    @include ctx_mobile(portrait) {
+      justify-content: space-around;
+      margin-top: px-to-rem(50, $font-size-mobile);
+    }
   }
 
   &__social-item {
@@ -114,6 +151,10 @@
 
   &__contacts {
     text-align: left;
+
+    @include ctx_mobile(portrait) {
+      margin-left: 4%;
+    }
   }
 
   &__contacts-title {
@@ -133,6 +174,15 @@
 
     @include ctx_tablet(portrait) {
       margin-left: px-to-rem(40);
+    }
+
+    @include ctx_mobile {
+      margin-left: 0;
+      text-align: right;
+    }
+
+    @include ctx_mobile(portrait) {
+      margin-right: 4%;
     }
   }
 
@@ -170,5 +220,13 @@
     flex-basis: 100%;
     justify-content: flex-end;
     text-align: right;
+
+    @include ctx_mobile(portrait) {
+      background-color: #363636;
+      justify-content: center;
+      margin-top: px-to-rem(30, $font-size-mobile);
+      padding: px-to-rem(10, $font-size-mobile) 0;
+      text-align: center;
+    }
   }
 }

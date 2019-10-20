@@ -42,7 +42,19 @@
     z-index: 1;
 
     @include ctx_tablet {
-      height: 23rem;
+      height: px-to-rem(320, $font-size-tablet);
+    }
+
+    @include ctx_mobile(landscape) {
+      height: px-to-rem(240, $font-size-mobile);
+    }
+
+    @include ctx_mobile(portrait) {
+      top: px-to-rem(30, $font-size-mobile);
+      left: 50%;
+      width: 60%;
+      height: auto;
+      transform: translateX(-50%);
     }
   }
 
@@ -50,6 +62,11 @@
     @include ctx_tablet {
       max-width: unset;
       height: 100%;
+    }
+
+    @include ctx_mobile(portrait) {
+      max-width: 100%;
+      height: auto;
     }
   }
 
@@ -70,12 +87,29 @@
     @include ctx_tablet(portrait) {
       padding: px-to-rem(70) px-to-rem(50) px-to-rem(50) px-to-rem(240);
     }
+
+    @include ctx_mobile(portrait) {
+      width: 100%;
+      align-items: center;
+      padding: px-to-rem(230, $font-size-mobile) px-to-rem(30, $font-size-mobile) px-to-rem(30, $font-size-mobile);
+    }
   }
 
   &__quote-sign {
     position: absolute;
     top: px-to-rem(25);
     right: px-to-rem(25);
+
+    @include ctx_mobile {
+      width: px-to-rem(60, $font-size-mobile);
+    }
+
+    @include ctx_mobile(portrait) {
+      top: 0;
+      right: unset;
+      left: px-to-rem(30, $font-size-mobile);
+      transform: translateY(-50%);
+    }
   }
 
   &__quote-title {
@@ -96,5 +130,9 @@
   &__quote-text {
     font-size: px-to-rem(18);
     text-align: left;
+
+    @include ctx_mobile(portrait) {
+      text-align: center;
+    }
   }
 }

@@ -25,10 +25,19 @@
     @include ctx_tablet {
       margin-top: px-to-rem(35);
     }
+
+    @include ctx_mobile(portrait) {
+      flex-direction: column;
+      margin-top: 0;
+    }
   }
 
   &__form-label {
     flex-basis: 48%;
+
+    @include ctx_mobile(portrait) {
+      margin-top: px-to-rem(20, $font-size-mobile);
+    }
   }
 
   &__form-input {

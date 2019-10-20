@@ -5,7 +5,7 @@
 @import "screens/tablet";
 
 // Function for converting a px based font-size to rem.
-@function px-to-rem($size, $font-size: $base-font-size) {
+@function px-to-rem($size, $font-size: $font-size-base) {
   $remSize: $size / $font-size;
 
   @return #{$remSize}rem;

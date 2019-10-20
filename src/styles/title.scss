@@ -12,6 +12,11 @@
     align-items: center;
     justify-content: flex-end;
     background-color: $prime-orange;
+
+    @include ctx_mobile {
+      width: px-to-rem(35, $font-size-mobile);
+      height: px-to-rem(35, $font-size-mobile);
+    }
   }
 
   &__number {
@@ -36,12 +41,25 @@
       background-color: #ffffff;
       content: "";
     }
+
+    @include ctx_mobile {
+      font-size: px-to-rem(18, $font-size-mobile);
+      line-height: px-to-rem(18, $font-size-mobile);
+
+      &::after {
+        height: px-to-rem(1, $font-size-mobile);
+      }
+    }
   }
 
   &__caption {
     font-family: $mayeka-regular;
     font-size: px-to-rem(20);
     margin-left: px-to-rem(15);
+
+    @include ctx_mobile {
+      font-size: px-to-rem(17, $font-size-mobile);
+    }
   }
 
   &__text {
@@ -49,5 +67,9 @@
     font-size: px-to-rem(35);
     margin-top: px-to-rem(20);
     text-transform: uppercase;
+
+    @include ctx_mobile {
+      font-size: px-to-rem(21, $font-size-mobile);
+    }
   }
 }

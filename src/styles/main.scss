@@ -17,16 +17,3 @@
 @import "../chunks/customers-feedback/customers-feedback";
 @import "../chunks/portfolio/portfolio";
 @import "../chunks/contact-us/contact-us";
-
-html {
-  font-size: $base-font-size+px;
-
-  @media (max-width: 1024px) {
-    font-size: 14px;
-  }
-}
-
-body {
-  font-family: "Helvetica Neue", sans-serif;
-  text-align: center;
-}
