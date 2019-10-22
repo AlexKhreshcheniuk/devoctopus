@@ -1,5 +1,5 @@
 @mixin ctx_mobile($orientation: all) {
-  $max-device-width: 375;
+  $max-device-width: 414;
   $max-device-height: 900;
 
   @if $orientation == all {

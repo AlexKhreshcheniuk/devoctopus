@@ -12,6 +12,7 @@
 
   @include ctx_mobile {
     justify-content: flex-end;
+    margin: px-to-rem(15, $font-size-mobile) 0;
   }
 
   &__logo {
