@@ -5,7 +5,7 @@ function includeHTML() {
   let xhttp;
 
   /* Loop through a collection of all HTML elements: */
-  const z = document.getElementsByTagName('*');
+  const z = document.querySelectorAll('[do-include-html]');
   for (i = 0; i < z.length; i += 1) {
     element = z[i];
     /* search for elements with a certain attribute: */
