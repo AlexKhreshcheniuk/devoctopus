@@ -19,7 +19,7 @@
     <div class="application__our-process" do-include-html="./our-process.html"></div>
     <div class="application__technology" do-include-html="./technology.html"></div>
     <div class="application__our-philosophy" do-include-html="./our-philosophy.html"></div>
-    <div class="application__our-services" do-include-html="./chunks/ou/our-services.html"></div>
+    <div class="application__our-services" do-include-html="./our-services.html"></div>
     <div class="application__our-team" do-include-html="./our-team.html"></div>
     <div class="application__customers-feedback" do-include-html="./customers-feedback.html"></div>
     <div class="application__portfolio" do-include-html="./portfolio.html"></div>
@@ -29,5 +29,11 @@
 
 <script src="./js/app.js"></script>
 <script src="./js/menuToggler.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+           emailjs.init('user_ktvRisjZ0eN3EVUq75tK2');
+        })();
+</script>
 </body>
 </html>
