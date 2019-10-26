@@ -22,7 +22,7 @@ module.exports = {
     './src/styles/main.scss',
   ],
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve('public'),
     filename: 'app.bundle.js',
   },
   module: {

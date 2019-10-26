@@ -61,4 +61,4 @@ typings/
 .env
 
 # gitignore dist folder
-dist
+public
