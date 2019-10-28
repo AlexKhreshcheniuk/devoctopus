@@ -36,6 +36,19 @@ function addHandler() {
           console.log('FAILED...', error);
        });;
     });
+}
+
+document.getElementById('app').onclick = ( e )=> {
+  if(e.target.classList.contains('do-button')) {
+    const containerId = e.target.getAttribute('data-container');
+    if(containerId) {
+      document.getElementById(containerId).style.display = 'block';
+      e.target.style.display = 'none';
+    }
+  } else {
+    e.preventDefault();
   }
+
+};
 
 includeHTML();
