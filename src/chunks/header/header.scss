@@ -79,7 +79,6 @@
   /* stylelint-disable no-descending-specificity */
   &__menu-item {
     position: relative;
-    border-radius: px-to-rem(3);
     font-family: mayeka-regular-demo, sans-serif;
     color: #000000;
     cursor: pointer;
@@ -111,11 +110,6 @@
     }
   }
   /* stylelint-enable */
-  &__search {
-    min-width: px-to-rem(12);
-    cursor: pointer;
-    margin-left: px-to-rem(15);
-  }
 
   &_opened {
     .header__menu-list {

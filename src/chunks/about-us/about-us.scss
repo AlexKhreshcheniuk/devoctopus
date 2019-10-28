@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   margin: 6.7% 0;
+  padding-bottom: px-to-rem(40);
   overflow: hidden;
 
   @include ctx_tablet(landscape) {
@@ -57,7 +58,6 @@
   &__image {
     @include ctx_tablet {
       max-width: unset;
-      height: 80%;
     }
 
     @include ctx_mobile(portrait) {

@@ -1,7 +1,7 @@
 @import "../../styles/utility/mixins";
 
 $indent-right: px-to-rem(75);
-$indent-right-tablet: px-to-rem(50);
+$indent-right-tablet: 2.5vw;
 $step-icon-size: px-to-rem(134);
 
 .our-process {
@@ -16,9 +16,14 @@ $step-icon-size: px-to-rem(134);
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: px-to-rem(35);
     margin-left: auto;
     margin-right: auto;
+
+    @include ctx_tablet(landscape) {
+      justify-content: space-between;
+    }
 
     @include ctx_tablet(portrait) {
       display: grid;

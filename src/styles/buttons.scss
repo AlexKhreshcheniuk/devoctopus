@@ -18,7 +18,6 @@
   &:hover {
     background-color: rgba($prime-orange, 0.1);
     border-color: lighten($prime-orange, 30%) lighten($prime-orange, 30%) $prime-orange lighten($prime-orange, 30%);
-    border-radius: px-to-rem(5);
     color: $prime-orange;
   }
 
