@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: px-to-rem(33) 0;
+  margin: px-to-rem(33) auto;
 
   @include ctx_tablet(portrait) {
     justify-content: flex-end;
