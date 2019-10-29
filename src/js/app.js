@@ -13,12 +13,12 @@ async function includeHTML() {
     file = element.getAttribute('do-include-html');
     if (file) {
       let response = await fetch(file);
-      if(length - 1 == i) {
+      if (length - 1 == i) {
         // TODO: find approach to execute script inside loaded file
         addHandler()
       }
       if (response.ok) {
-        element.innerHTML= await response.text();
+        element.innerHTML = await response.text();
       } else {
         element.innerHTML = 'Page not found.';
       }
@@ -27,28 +27,27 @@ async function includeHTML() {
 }
 
 function addHandler() {
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        emailjs.sendForm('gmail', 'template_asI2nKbM', this).then(function(response) {
-          document.getElementById('contact-us-title').textContent = 'We will reach out to you shortly'
-          document.getElementById('contact-form').style.display = 'none';
-       }, function(error) {
-          console.log('FAILED...', error);
-       });;
+  document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    emailjs.sendForm('gmail', 'template_asI2nKbM', this).then(function (response) {
+      document.getElementById('contact-us-title').textContent = 'We will reach out to you shortly';
+      document.getElementById('contact-form').style.display = 'none';
+    }, function (error) {
+      console.log('FAILED...', error);
     });
+  });
 }
 
-document.getElementById('app').onclick = ( e )=> {
-  if(e.target.classList.contains('do-button')) {
+document.getElementById('app').onclick = (e) => {
+  if (e.target.classList.contains('do-button')) {
     const containerId = e.target.getAttribute('data-container');
-    if(containerId) {
+    if (containerId) {
       document.getElementById(containerId).style.display = 'block';
       e.target.style.display = 'none';
     }
   } else {
     e.preventDefault();
   }
-
 };
 
 includeHTML();
