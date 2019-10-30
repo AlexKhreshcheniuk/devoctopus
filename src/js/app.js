@@ -45,8 +45,6 @@ document.getElementById('app').onclick = (e) => {
       document.getElementById(containerId).style.display = 'block';
       e.target.style.display = 'none';
     }
-  } else {
-    e.preventDefault();
   }
 };
 
