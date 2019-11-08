@@ -1,4 +1,6 @@
-async function includeHTML() {
+import { menuTogglerHandler } from './menuToggler';
+
+async function includeHTML(callback) {
   let i;
   let element;
   let file;
@@ -24,6 +26,8 @@ async function includeHTML() {
       }
     }
   }
+
+  callback();
 }
 
 function addHandler() {
@@ -48,4 +52,4 @@ document.getElementById('app').onclick = (e) => {
   }
 };
 
-includeHTML();
+includeHTML(menuTogglerHandler);
