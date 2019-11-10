@@ -33,7 +33,13 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        loader: 'raw-loader',
+        use: {
+          loader: 'html-loader',
+          options: {
+            interpolate: true,
+            attrs: [':data-src']
+          }
+        }
       },
     ],
   },

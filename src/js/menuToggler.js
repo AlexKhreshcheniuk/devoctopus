@@ -1,4 +1,4 @@
-export const menuTogglerHandler = function menuToggleHandler() {
+function menuToggleHandler() {
   const menuToggler = document.querySelector('.js_menu-button');
   const header = document.querySelector('.js_header');
   const documentBody = document.getElementsByTagName("body")[0];
@@ -11,4 +11,4 @@ export const menuTogglerHandler = function menuToggleHandler() {
   }
 }
 
-// document.addEventListener('DOMContentLoaded', menuToggleHandler());
+document.addEventListener('DOMContentLoaded', menuToggleHandler);
