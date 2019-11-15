@@ -56,5 +56,8 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "animated-scroll-to": "^2.0.5"
+  }
 }

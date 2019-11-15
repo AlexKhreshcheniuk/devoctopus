@@ -2,6 +2,7 @@
 
 .do-top-news {
   position: relative;
+  margin-top: 10%;
 
   @include ctx_mobile {
     height: px-to-rem(400, $font-size-mobile);

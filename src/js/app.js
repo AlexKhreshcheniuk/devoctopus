@@ -1,3 +1,5 @@
+import * as menu from './menuToggler';
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();

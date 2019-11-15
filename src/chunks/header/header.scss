@@ -1,6 +1,16 @@
 @import "../../styles/utility/mixins";
 /* stylelint-disable no-descending-specificity */
 
+@media (min-width: 1025px) {
+  .application__header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff60;
+    z-index: 1;
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -120,12 +130,9 @@
       color: #f1f1f1;
       font-size: px-to-rem(17, $font-size-mobile);
       margin-bottom: 3rem;
-      opacity: 0;
-      overflow: hidden;
       padding-top: 1rem;
       padding-bottom: 1rem;
       transform: translateY(-100%);
-      visibility: hidden;
 
       &:last-child {
         margin-bottom: 0;
@@ -183,10 +190,6 @@
       transform: translateY(0);
       visibility: visible;
       pointer-events: all;
-    }
-
-    .header__menu-item {
-      animation: menuShowAnimation 0.5s linear forwards;
     }
 
     @for $menuItem from 0 through 6 {
