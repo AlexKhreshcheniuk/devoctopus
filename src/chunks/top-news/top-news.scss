@@ -67,15 +67,15 @@
 
   &__number {
     position: absolute;
-    right: px-to-rem(40);
-    top: 0;
+    right: px-to-rem(55);
+    top: px-to-rem(-15);
     font-family: BebasNeue, sans-serif;
     font-size: px-to-rem(118);
     color: #fbd0c3;
 
     &::after {
       position: absolute;
-      left: 0;
+      left: -30%;
       bottom: 25%;
       width: 165%;
       height: px-to-rem(2);

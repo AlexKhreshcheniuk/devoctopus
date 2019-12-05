@@ -1,11 +1,11 @@
 <footer class="footer">
   <div class="footer__container container">
     <div class="footer__section footer__section_left">
-      <form class="footer__subscribe">
+      <form action="" class="footer__subscribe subscribe-form">
         <label class="footer__subscribe-label" for="footer__subscribe-input">
           Subscribe to our newsletters
         </label>
-        <input type="email" id="footer__subscribe-input" class="footer__subscribe-input do-input" placeholder="E-mail"/>
+        <input type="email" id="footer__subscribe-input" name="email" class="footer__subscribe-input do-input" placeholder="E-mail"/>
         <div class="footer__subscribe-button-set">
           <button class="footer__subscribe-button do-button do-button_orange" type="submit">Subscribe</button>
         </div>
@@ -29,7 +29,7 @@
         </a>
       </div>
 
-      <div class="footer__about">
+      <div class="footer__about temporarry-unavalable">
         <div class="footer__about-title">About</div>
 
         <div class="footer__about-text">
@@ -47,11 +47,15 @@
         </div>
 
         <div class="footer__contacts-address">
-          Proostwetering 50<br/>
-          3543 AH Utrecht<br/>
-          Netherlands<br/>
-          Tel: (+1) 212 244 7234<br/>
-          Fax: (+1) 212 244 7234
+          26 Avenue Surrey<br/>
+          BC Canada<br/>
+          Tel: (+1) 77 830 23 005<br/>
+        </div>
+
+        <div class="footer__contacts-address">
+          Sportyvna Square str. 1A<br/>
+          Kyiv, 01023<br/>
+          Tel: (+3) 80 638 211 521<br/>
         </div>
       </div>
 
@@ -60,18 +64,18 @@
           Who we are
         </div>
 
-        <div class="footer__menu-list">
-          <a href="" class="footer__menu-item">Our team</a>
-          <a href="" class="footer__menu-item">Portfolio</a>
-          <a href="" class="footer__menu-item">How we work</a>
-          <a href="" class="footer__menu-item">Contact us</a>
-          <a href="" class="footer__menu-item">Our services</a>
+        <div class="footer__menu-list menu-handler">
+          <a class="footer__menu-item" data-id="team">Our team</a>
+          <a class="footer__menu-item temporarry-unavalable">Portfolio</a>
+          <a class="footer__menu-item" data-id="about">How we work</a>
+          <a class="footer__menu-item" data-id="contacts">Contact us</a>
+          <a class="footer__menu-item" data-id="philosophy">Our philosophy</a>
         </div>
       </div>
 
       <div class="footer__right-reserved">
         All rights reserved<br/>
-        ©Devoctopus 20t19
+        ©Devoctopus 2016
       </div>
     </div>
   </div>

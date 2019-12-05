@@ -28,8 +28,9 @@ const toggleMenu = () => {
 const menuNav = () => {
   let prevNavElement = undefined;
 
-  const menuList = document.querySelector('.header__menu-list');
-  menuList.addEventListener('click', (e) => {
+  const menuList = document.querySelectorAll('.menu-handler');
+  menuList.forEach((menuContainer) => { 
+    menuContainer.addEventListener('click', (e) => {
       e.preventDefault();
       const selectedMenuItem = e.target;
 
@@ -44,7 +45,8 @@ const menuNav = () => {
         animateScrollTo(targetElement, {verticalOffset: -30});
         isMobile ? toggleMenu() : '';
       }
-  });
+    });
+  })
 };
 
 // stop scroll
