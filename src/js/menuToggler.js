@@ -25,6 +25,14 @@ const toggleMenu = () => {
   documentBody.classList.toggle('scroll-fixed');
 } 
 
+const closeMenu = () => {
+  const header = document.querySelector('.js_header');
+  const documentBody = document.getElementsByTagName("body")[0];
+  
+  header.classList.remove('header_opened');
+  documentBody.classList.remove('scroll-fixed');
+} 
+
 const menuNav = () => {
   let prevNavElement = undefined;
 
@@ -41,9 +49,10 @@ const menuNav = () => {
 
         prevNavElement = selectedMenuItem;
         selectedMenuItem.classList.toggle('header__menu-item_active');
-        // perform animated scrolling by getting top-position of target-element and set it as scroll target
+        // perform animated scrolling by getting top-position of
+        // target-element and set it as scroll target
         animateScrollTo(targetElement, {verticalOffset: -30});
-        isMobile ? toggleMenu() : '';
+        isMobile ? closeMenu() : '';
       }
     });
   })
