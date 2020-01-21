@@ -21,3 +21,6 @@
   - `npm run run lint:js`: Lints JS with ESLint.
   - `npm run lint:styles`: Lints SCSS stylesheets with stylelint.
   - `npm run lint:html`: Lints HTML for a11y issues using pa11y.
+
+## Maintenance
+Use `npx npm-check-updates -u --packageFile package.json` to update all packages.
