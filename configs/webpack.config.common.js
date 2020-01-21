@@ -14,9 +14,6 @@ const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map(
 );
 
 module.exports = {
-  node: {
-    fs: 'empty',
-  },
   entry: [
     './src/js/app.js',
     './src/styles/main.scss',
@@ -37,9 +34,9 @@ module.exports = {
           loader: 'html-loader',
           options: {
             interpolate: true,
-            attrs: [':data-src']
-          }
-        }
+            attrs: [':data-src'],
+          },
+        },
       },
     ],
   },
@@ -62,5 +59,4 @@ module.exports = {
   stats: {
     colors: true,
   },
-  devtool: 'source-map',
 };
