@@ -12,21 +12,6 @@ module.exports = merge(common, {
   optimization: {
     minimize: true,
   },
-  module: {
-    rules: [
-      {
-        test: /\.(sass|scss)$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          'css-loader',
-          'postcss-loader',
-          'sass-loader',
-        ],
-      },
-    ],
-  },
   plugins: [
     new CleanWebpackPlugin(['public'], {
       root: process.cwd(),

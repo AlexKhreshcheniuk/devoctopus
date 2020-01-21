@@ -6,6 +6,8 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
+const autoprefixer = require('autoprefixer');
+
 const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map(
   dir => new HTMLWebpackPlugin({
     filename: path.basename(dir), // Output
@@ -27,6 +29,20 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+      },
+      {
+        test: /\.(css|sass|scss)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [autoprefixer],
+            },
+          },
+          'sass-loader',
+        ],
       },
       {
         test: /\.html$/,
