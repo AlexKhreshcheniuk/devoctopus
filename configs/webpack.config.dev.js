@@ -1,6 +1,18 @@
+const path = require('path');
+const glob = require('glob');
+
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+
 const common = require('./webpack.config.common.js');
+
+const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map(
+  (dir) => new HTMLWebpackPlugin({
+    filename: path.basename(dir), // Output
+    template: dir, // Input
+  }),
+);
 
 module.exports = merge(common, {
   mode: 'development',
@@ -13,19 +25,8 @@ module.exports = merge(common, {
     port: process.env.PORT || 3000,
     host: process.env.HOST || 'localhost',
   },
-  module: {
-    rules: [
-      {
-        test: /\.(png|jp(e*)g|svg)$/,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            limit: 8000, // Convert images < 8kb to base64 strings
-            name: 'images/[hash]-[name].[ext]',
-          },
-        }],
-      },
-    ],
-  },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    ...generateHTMLPlugins(),
+  ],
 });

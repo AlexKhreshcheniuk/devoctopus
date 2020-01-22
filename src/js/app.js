@@ -1,3 +1,5 @@
+import emailjs from 'emailjs-com';
+
 import './menu-toggler';
 
 const handleEmailJsFail = (error) => {

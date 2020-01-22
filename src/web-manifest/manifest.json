@@ -1,10 +1,10 @@
 {
-  "name": "DEVOCTOPUS",
+  "name": "DevOctopus.io",
   "short_name": "DO",
   "theme_color": "#d35931",
   "background_color": "#272425",
   "display": "standalone",
-  "Scope": "/",
+  "scope": "/",
   "start_url": "/",
   "icons": [
     {

@@ -1,24 +1,14 @@
-const glob = require('glob');
 const path = require('path');
 
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
-
 const autoprefixer = require('autoprefixer');
-
-const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map(
-  dir => new HTMLWebpackPlugin({
-    filename: path.basename(dir), // Output
-    template: dir, // Input
-  }),
-);
 
 module.exports = {
   entry: [
-    './src/js/app.js',
-    './src/styles/main.scss',
+    './src/index.js',
+    './src/index.scss',
   ],
   output: {
     path: path.resolve(process.cwd(), 'public'),
@@ -31,9 +21,11 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
-        test: /\.(css|sass|scss)$/,
+        test: /\.(sass|scss)$/,
         use: [
-          'style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -54,6 +46,16 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8000, // Convert images < 8kb to base64 strings
+            name: 'images/[hash]-[name].[ext]',
+          },
+        }],
+      },
     ],
   },
   plugins: [
@@ -64,13 +66,24 @@ module.exports = {
       failOnError: false,
       quiet: false,
     }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
     new CopyWebpackPlugin([
       {
         from: './src/assets/',
         to: './assets/',
       },
+      {
+        from: './src/web-manifest',
+        to: './web-manifest',
+      },
+      {
+        from: './src/favicon.ico',
+        to: './favicon.ico',
+      },
     ]),
-    ...generateHTMLPlugins(),
   ],
   stats: {
     colors: true,
