@@ -24,6 +24,8 @@
   align-items: center;
   justify-content: space-between;
   margin: px-to-rem(33) auto;
+  will-change: margin;
+  transition: margin 0.5s ease;
 
   @include ctx_tablet(portrait) {
     justify-content: flex-end;
@@ -35,6 +37,7 @@
   }
 
   &__logo {
+    display: flex;
     min-width: px-to-rem(165);
     width: px-to-rem(320);
 
