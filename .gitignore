@@ -1,3 +1,6 @@
+# Local git config
+.gitconfig
+
 # IDE's
 .idea
 

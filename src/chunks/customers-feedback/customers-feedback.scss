@@ -1,7 +1,7 @@
 @import "../../styles/utility/mixins";
 
 .customers-feedback {
-  background: url("/assets/customers-feedback/customers-feedback-bg.jpg") no-repeat center;
+  background: url("chunks/customers-feedback/img/customers-feedback-bg.jpg") no-repeat center;
   background-size: cover;
   padding-top: px-to-rem(60);
   padding-bottom: px-to-rem(94);
