@@ -1,16 +1,41 @@
 <section class="do-top-news container" id="home">
-  <div class="do-top-news__image-item">
-    <img class="do-top-news__image" src="./img/part-our-team.jpg"/>
-  </div>
+  <div id="top-slider" style="width:100%; height:612px">
 
-  <div class="do-top-news__content">
-    <div class="do-top-news__number">01</div>
+     <div class="do-top-news__image-item">
+        <img class="do-top-news__image" src="./img/part-our-team.jpg"/>
+     
 
-    <div class="do-top-news__title">
-      WE ARE<br/>
-      it engineering company
+      <div class="do-top-news__content">
+        <div class="do-top-news__number">01</div>
+
+        <div class="do-top-news__title">
+          WE ARE<br/>
+          it engineering company
+        </div>
+      </div>
     </div>
+    
+      <div class="do-top-news__image-item">
+        <img class="do-top-news__image" src="./img/part-our-team.jpg"/>  
 
-    <div class="do-top-news__text">progressive and open minded</div>
+      <div class="do-top-news__content">
+        <div class="do-top-news__number">02</div>
+
+        <div class="do-top-news__title">
+          WE ARE<br/>
+          it engineering company
+        </div>
+      </div>
   </div>
+</div>
+
 </section>
+
+<script>
+  simpleslider.getSlider({
+    container: document.getElementById('top-slider'),
+    transitionTime:1,
+    delay:4
+  }); 
+</script>
+
