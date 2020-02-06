@@ -1,3 +1,9 @@
+var nextElements = document.getElementsByClassName('next');
+var prevElements = document.getElementsByClassName('prev');
+for(var i = 0; i < nextElements.length; i++){
+  nextElements[i].setAttribute('onclick', 'plusSlides(1)')
+  prevElements[i].setAttribute('onclick', 'plusSlides(-1)')
+}
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -21,13 +27,14 @@ function showSlides(n) {
       slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
 
-showSlides();
+// showSlides();
+
 //Dinamic changing slider 
 
 // var slideIndex = 0;
