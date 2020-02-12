@@ -46,17 +46,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // email form handler
   document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
-
     const { email } = this.elements;
 
     if (!contactEmailValidator(email)) {
       return;
     }
-
+    event.target.classList.add('disabled');
+    const loader = document.getElementsByClassName('lds-ellipsis')[0];
+    loader.style.display = 'block';
     emailjs.sendForm('gmail', 'template_asI2nKbM', this).then(
       () => {
         document.getElementById('contact-us-title').textContent = 'We will reach out to you shortly';
         document.getElementById('contact-form').style.display = 'none';
+        loader.style.display = 'none';
       },
       handleEmailJsFail,
     );
