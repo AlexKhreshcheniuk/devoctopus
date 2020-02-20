@@ -15,6 +15,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="icon" type="image/ico" href="./favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="./web-manifest/icon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./web-manifest/icon-32x32.png">
@@ -50,7 +51,7 @@
     <div class="application__customers-feedback" do-include-html="./customers-feedback.html">
       ${require('./chunks/customers-feedback/customers-feedback.html')}
     </div>
-    <div class="application__portfolio temporarry-unavalable" do-include-html="./portfolio.html">
+    <div class="application__portfolio" do-include-html="./portfolio.html">
       ${require('./chunks/portfolio/portfolio.html')}
     </div>
     <div class="application__contact-us" do-include-html="./contact-us.html">
@@ -60,6 +61,7 @@
       ${require('./chunks/footer/footer.html')}
     </div>
   </div>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 
 </html>
